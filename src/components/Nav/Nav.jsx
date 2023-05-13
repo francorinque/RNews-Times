@@ -18,11 +18,12 @@ import NavMenu from "./NavMenu"
 //others
 import { useSelector, useDispatch } from "react-redux"
 import { toggleTheme } from "../../store/theme/theme.slice"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
+import { MenuContext } from "../../context/menuContext"
 
 const Nav = () => {
-  const [isOpenMenu, setIsOpenMenu] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const { isOpenMenu, setIsOpenMenu } = useContext(MenuContext)
   const dispatch = useDispatch()
   const theme = useSelector(state => state.theme.theme)
   let isDarkTheme = theme === "dark"
@@ -55,7 +56,7 @@ const Nav = () => {
           </button>
         </ToggleWrapperStyled>
 
-        <NavMenu isOpenMenu={isOpenMenu} />
+        <NavMenu />
       </NavStyled>
     </NavWrapperStyled>
   )

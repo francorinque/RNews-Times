@@ -19,12 +19,15 @@ export const NewsItemStyled = styled.div`
 export const NewsItemTitleStyled = styled.h4`
   font-size: clamp(18px, 2vw, 20px);
   font-weight: var(--semibold);
+  margin-top: 20px;
 `
 
 export const NewsItemInfoStyled = styled.div`
   display: flex;
+  margin-top: 20px;
   gap: 20px;
   justify-content: space-between;
+
   & > * {
     font-size: 14px;
     font-weight: var(--regular);

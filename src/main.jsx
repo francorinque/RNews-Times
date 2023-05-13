@@ -4,12 +4,15 @@ import App from "./App.jsx"
 import { store } from "./store/store.js"
 import { Provider } from "react-redux"
 import { FiltersProvider } from "./context/filtersContext.jsx"
+import { MenuProvider } from "./context/menuContext.jsx"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   // <React.StrictMode>
   <Provider store={store}>
     <FiltersProvider>
-      <App />
+      <MenuProvider>
+        <App />
+      </MenuProvider>
     </FiltersProvider>
   </Provider>
   // </React.StrictMode>

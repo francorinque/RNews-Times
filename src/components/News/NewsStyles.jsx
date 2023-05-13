@@ -4,7 +4,7 @@ import { ButtonGlobalStyled } from "../styles/GlobalComponents"
 export const NewsCardsStyled = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 40px;
   align-content: flex-start;
   justify-content: flex-start;
 `

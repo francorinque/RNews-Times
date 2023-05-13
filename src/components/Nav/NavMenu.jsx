@@ -1,9 +1,13 @@
-import { AnimatePresence } from 'framer-motion'
-import { NavMenuDesktopStyled, NavMenuMobileStyled } from './NavStyles'
+import { AnimatePresence } from "framer-motion"
+import { NavMenuDesktopStyled, NavMenuMobileStyled } from "./NavStyles"
 
-import NavMenuLinks from './NavMenuLinks'
+import NavMenuLinks from "./NavMenuLinks"
+import { useContext } from "react"
+import { MenuContext } from "../../context/menuContext"
 
-const NavMenu = ({ isOpenMenu }) => {
+const NavMenu = () => {
+  const { isOpenMenu, setIsOpenMenu } = useContext(MenuContext)
+
   return (
     <>
       {/* mobile */}
@@ -13,9 +17,9 @@ const NavMenu = ({ isOpenMenu }) => {
             initial={{ translateX: 600 }}
             animate={{ translateX: 0 }}
             exit={{ translateX: 600 }}
-            transition={{ type: 'tween' }}
+            transition={{ type: "tween" }}
           >
-            <NavMenuLinks />
+            <NavMenuLinks onClick={() => setIsOpenMenu(false)} />
           </NavMenuMobileStyled>
         )}
       </AnimatePresence>
