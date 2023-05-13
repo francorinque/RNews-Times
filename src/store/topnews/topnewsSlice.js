@@ -4,7 +4,7 @@ const initialState = {
   loading: false,
   topNews: [],
   error: null,
-  total: null,
+  total: 0,
   categories: []
 }
 
