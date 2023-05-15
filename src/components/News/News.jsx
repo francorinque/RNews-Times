@@ -6,7 +6,7 @@ import {
   WrapperLoader
 } from "./NewsStyles"
 //components
-import { Loader } from "../UI"
+import { Loader, MySkeleton } from "../UI"
 //others
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
@@ -23,8 +23,10 @@ const News = () => {
   //stado global
   let { topNews, loading, total } = useSelector(state => state.topNews)
   //pagination
-  const { perPage, setPerPage, handlePrev, handleNext } =
-    usePagination(INITIAL_STATE)
+  const { perPage, setPerPage, handlePrev, handleNext } = usePagination(
+    INITIAL_STATE,
+    topNews
+  )
   //traemos los datos
   useEffect(() => {
     dispatch(getTopNews())
@@ -35,25 +37,28 @@ const News = () => {
   //filtramos los datos
   let filteredTopNews = filterTopNews(topNews).slice(0, perPage)
 
-  if (loading) {
-    return (
-      <WrapperLoader>
-        <Loader />
-      </WrapperLoader>
-    )
-  }
-
   return (
     <>
       <NewsWrapperStyled>
         <NewsCardsStyled>
-          {filteredTopNews?.map(newsItem => {
-            return (
-              newsItem.multimedia && (
-                <NewsItem key={newsItem.uri} {...newsItem} />
+          {loading ? (
+            <>
+              <MySkeleton />
+              <MySkeleton />
+              <MySkeleton />
+              <MySkeleton />
+              <MySkeleton />
+              <MySkeleton />
+            </>
+          ) : (
+            filteredTopNews.map(newsItem => {
+              return (
+                newsItem.multimedia && (
+                  <NewsItem key={newsItem.uri} {...newsItem} />
+                )
               )
-            )
-          })}
+            })
+          )}
         </NewsCardsStyled>
 
         {filter === "All" && (

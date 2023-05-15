@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { useSelector } from "react-redux"
 
-export const usePagination = initialState => {
+export const usePagination = (initialState, arr) => {
   const [perPage, setPerPage] = useState(initialState)
-  const total = useSelector(state => state.topNews).length
+  const total = arr.length
 
   const handlePrev = () => {
     if (perPage === initialState) return

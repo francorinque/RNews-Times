@@ -1,35 +1,38 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom"
+
+export const NewsItemWrapperStyled = styled(Link)`
+  color: ${({ theme }) => theme.text};
+  flex: 1 0 300px;
+  min-height: 400px;
+  cursor: pointer;
+`
 
 export const NewsItemStyled = styled.div`
-  flex: 1 0 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  cursor: pointer;
-
-  a {
-    color: ${({ theme }) => theme.text};
-  }
-
   img {
-    height: 400px;
+    height: 350px;
   }
 `
 
-export const NewsItemTitleStyled = styled.h4`
-  font-size: clamp(18px, 2vw, 20px);
-  font-weight: var(--semibold);
-  margin-top: 20px;
+export const NewsItemContentStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`
+
+export const NewsItemTitleStyled = styled.div`
+  text-align: start;
+  h4 {
+    font-size: clamp(16px, 2vw, 18px);
+  }
 `
 
 export const NewsItemInfoStyled = styled.div`
   display: flex;
-  margin-top: 20px;
-  gap: 20px;
   justify-content: space-between;
+  align-items: center;
+`
 
-  & > * {
-    font-size: 14px;
-    font-weight: var(--regular);
-  }
+export const NewsItemDateStyled = styled.span`
+  font-size: 14px;
 `

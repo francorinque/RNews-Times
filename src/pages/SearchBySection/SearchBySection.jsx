@@ -5,11 +5,19 @@ import { useParams } from "react-router-dom"
 import { getTopNews } from "../../apis/news"
 import { NewsItem } from "../../components"
 import { Loader } from "../../components/UI"
+import { usePagination } from "../../hooks"
+
+let INITIAL_STATE = 6
 
 const SearchBySection = () => {
   const [data, setData] = useState([])
   const [error, setError] = useState(false)
   const { section } = useParams()
+
+  const { perPage, setPerPage, handlePrev, handleNext } = usePagination(
+    INITIAL_STATE,
+    data.length > 0 && data
+  )
 
   useEffect(() => {
     let isCancelled = false
@@ -37,10 +45,11 @@ const SearchBySection = () => {
 
   return (
     <SearchBySectionStyled>
-      {!data.length && <Loader />}
-      {data?.map(item => (
-        <NewsItem key={item.uri} {...item} />
-      ))}
+      {!data.length ? (
+        <Loader />
+      ) : (
+        data?.map(item => <NewsItem key={item.uri} {...item} />)
+      )}
     </SearchBySectionStyled>
   )
 }

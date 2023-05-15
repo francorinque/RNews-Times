@@ -13,24 +13,24 @@ const NewsCategories = () => {
     setFilter(category)
   }
 
-  if (loading) {
-    return <Loader />
-  }
-
   return (
-    <NewsCategoriesStyled>
-      {categories.map((category, index) => {
-        let selected = category === filter
-        return (
-          <CategoryStyled
-            key={index + category}
-            selected={selected}
-            onClick={() => handleCategory(category)}
-          >
-            {category}
-          </CategoryStyled>
-        )
-      })}
+    <NewsCategoriesStyled loading={loading}>
+      {loading ? (
+        <Loader />
+      ) : (
+        categories.map((category, index) => {
+          let selected = category === filter
+          return (
+            <CategoryStyled
+              key={index + category}
+              selected={selected}
+              onClick={() => handleCategory(category)}
+            >
+              {category}
+            </CategoryStyled>
+          )
+        })
+      )}
     </NewsCategoriesStyled>
   )
 }
