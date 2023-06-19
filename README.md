@@ -1,4 +1,4 @@
-# News Page Proyect :tw-1f4f0:
+# News Page Proyect 📰
 
 Este es un proyecto creado en ReactJs usando la API de New York Times.
 
