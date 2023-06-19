@@ -1,10 +1,11 @@
 import { HomeStyled, WrapperGridStyled } from "./HomeStyles"
 //components
-import { News, NewsCategories, Aside } from "../../components"
+import { News, NewsCategories, Aside, RandomNew } from "../../components"
 
 const Home = () => {
   return (
     <HomeStyled>
+      <RandomNew />
       <h1>Top News</h1>
       <NewsCategories />
       <WrapperGridStyled>

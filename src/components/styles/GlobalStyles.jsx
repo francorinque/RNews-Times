@@ -45,6 +45,7 @@ export const GlobalStyles = createGlobalStyle`
   section{
     padding: 70px 0;
   }
+
 `
 
 export const lightTheme = {

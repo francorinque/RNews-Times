@@ -1,10 +1,11 @@
-import { ThemeProvider } from "styled-components"
-import Router from "./Router/Router"
 import {
   GlobalStyles,
   darkTheme,
   lightTheme
 } from "./components/styles/GlobalStyles"
+
+import { ThemeProvider } from "styled-components"
+import Router from "./Router/Router"
 //components
 import { Footer, Nav } from "./components"
 import { useSelector } from "react-redux"

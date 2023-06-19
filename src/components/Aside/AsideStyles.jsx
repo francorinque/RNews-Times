@@ -8,6 +8,10 @@ export const AsideStyled = styled.aside`
   text-align: start;
 `
 
+export const AsideTitleStyled = styled.h2`
+  margin-top: 3rem;
+`
+
 export const WrapperSticky = styled.div`
   display: flex;
   flex-direction: column;

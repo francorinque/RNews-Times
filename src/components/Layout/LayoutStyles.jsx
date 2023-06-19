@@ -1,4 +1,4 @@
-import { styled } from "styled-components"
+import styled from "styled-components"
 
 export const LayoutStyled = styled.div`
   width: 100%;
@@ -6,6 +6,6 @@ export const LayoutStyled = styled.div`
   margin: 0 auto;
   padding: 0 20px;
   min-height: 100vh;
-  margin-top: var(--h-header);
+  margin-top: 40px;
   position: relative;
 `

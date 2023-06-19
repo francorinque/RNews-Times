@@ -2,7 +2,8 @@ import {
   AsideStyled,
   AsideSectionStyled,
   AsideWrapperStyled,
-  WrapperSticky
+  WrapperSticky,
+  AsideTitleStyled
 } from "./AsideStyles"
 
 import { useEffect, useState } from "react"
@@ -13,7 +14,7 @@ const Aside = () => {
   return (
     <AsideStyled>
       <WrapperSticky>
-        <h2>Top sections</h2>
+        <AsideTitleStyled>Top sections</AsideTitleStyled>
         <AsideWrapperStyled>
           {INITIAL_SECTIONS?.map((item, i) => (
             <Link to={`/search-by-section/${item}`} key={item + i}>
