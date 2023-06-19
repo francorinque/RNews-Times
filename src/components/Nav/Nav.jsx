@@ -40,17 +40,17 @@ const Nav = () => {
   }, [])
 
   return (
-    <NavWrapperStyled scrolled={scrolled.toString()}>
+    <NavWrapperStyled $scrolled={scrolled} $isOpenMenu={isOpenMenu}>
       <NavStyled>
         <Logo width="70" />
 
-        <ThemeWrapperStyled>
+        <ThemeWrapperStyled $isOpenMenu={isOpenMenu}>
           <button onClick={() => dispatch(toggleTheme())}>
             {isDarkTheme ? <SunLight /> : <HalfMoon />}
           </button>
         </ThemeWrapperStyled>
 
-        <ToggleWrapperStyled>
+        <ToggleWrapperStyled $isOpenMenu={isOpenMenu}>
           <button onClick={() => setIsOpenMenu(!isOpenMenu)}>
             {isOpenMenu ? <Cancel /> : <MenuScale />}
           </button>

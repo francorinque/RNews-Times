@@ -9,7 +9,7 @@ export const AsideStyled = styled.aside`
 `
 
 export const AsideTitleStyled = styled.h2`
-  margin-top: 3rem;
+  margin-top: 1rem;
 `
 
 export const WrapperSticky = styled.div`

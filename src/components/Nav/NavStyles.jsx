@@ -10,14 +10,9 @@ export const NavWrapperStyled = styled.div`
   left: 0;
   width: 100%;
   z-index: 99;
-  background: ${({ theme }) => theme.bgHeader};
   transition: ease 1s;
-
-  @media (min-width: 768px) {transition: ease 1s;
-    background-color: ${({ scrolled }) =>
-      scrolled === "true" ? "var(--clr-nav-scrolled)" : "transparent"};
-    backdrop-filter: ${({ scrolled }) => (scrolled ? "blur(10px)" : "blur(0)")};
-  }
+  background: ${({ theme, $isOpenMenu, $scrolled }) =>
+    $scrolled || $isOpenMenu ? theme.bgHeader : "none"};
 `
 
 export const NavStyled = styled.nav`
@@ -88,9 +83,6 @@ const resetButton = styled.div`
 
     svg {
       color: ${({ theme }) => theme.textHeader};
-      @media (min-width: 768px) {
-        color: ${({ theme }) => theme.text};
-      }
     }
   }
 `

@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 export const DetailsStyled = styled.section`
-  padding: 70px 0;
   min-height: 100vh;
+  margin-bottom: 100px;
 `
 
 export const StatusWrapper = styled.div`

@@ -1,10 +1,10 @@
 import { styled } from "styled-components"
 
 export const HomeStyled = styled.section`
-  padding: 50px 0;
   display: flex;
   flex-direction: column;
   gap: 50px;
+  padding-top: calc(var(--h-header) + 5px);
 `
 
 export const WrapperGridStyled = styled.div`

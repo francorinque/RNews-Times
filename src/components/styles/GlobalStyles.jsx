@@ -42,8 +42,9 @@ export const GlobalStyles = createGlobalStyle`
     font-size: clamp(40px, 3vw, 70px);
     font-weight: var(--bold);
   }
+  
   section{
-    padding: 70px 0;
+    padding-top:  calc(var(--h-header) + 50px);
   }
 
 `
@@ -51,14 +52,14 @@ export const GlobalStyles = createGlobalStyle`
 export const lightTheme = {
   body: "var(--clr-primary-100)",
   text: "var(--clr-secundary-200)",
-  bgHeader: "var(--clr-secundary-200)",
-  textHeader: "var(--clr-primary-200)",
+  bgHeader: "var(--clr-primary-200)",
+  textHeader: "var(--clr-secundary-200)",
   bgCircle: "var(--clr-secundary-50)"
 }
 export const darkTheme = {
   body: "var(--clr-secundary-200)",
   text: "var(--clr-primary-100)",
-  bgHeader: "var(--clr-primary-200)",
-  textHeader: "var(--clr-secundary-200)",
+  bgHeader: "var(--clr-secundary-200)",
+  textHeader: "var(--clr-primary-200)",
   bgCircle: "var(--clr-primary-200)"
 }

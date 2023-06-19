@@ -3,19 +3,17 @@ import styled from "styled-components"
 export const RandomNewStyled = styled.div`
   width: 100%;
   position: relative;
-  height: 50vh;
+  height: 80vh;
 
   &::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: #00000099;
+    background: #000000a7;
+    backdrop-filter: blur(1.5px);
     z-index: 1;
   }
 
-  @media (min-width: 900px) {
-    height: 70vh;
-  }
   a {
     color: var(--clr-primary-100);
   }

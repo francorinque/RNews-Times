@@ -6,9 +6,11 @@ export const DetailsNewsItemStyled = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
+  text-align: center;
 
   img {
     height: 500px;
+    margin-inline: auto;
     object-fit: cover;
   }
 `
@@ -16,10 +18,13 @@ export const DetailsNewsItemStyled = styled.div`
 export const TitleStyled = styled.h3`
   color: var(--clr-secundary-50);
   font-size: clamp(30px, 3vw, 40px);
+  max-width: 800px;
+  margin-inline: auto;
 `
 
 export const ParagraphStyled = styled.p`
-  /* margin: 0 auto; */
+  max-width: 700px;
+  margin-inline: auto;
 `
 
 export const ByStyled = styled.span`
