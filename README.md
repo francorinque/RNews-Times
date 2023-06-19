@@ -1,11 +1,16 @@
 # News Page Proyect 📰
 
-Este es un proyecto creado en ReactJs usando la API de New York Times.
+This is a project built in ReactJs using the New York Times API.
 
-**Funcionalidad de la pagina:**
+**Page functionality:**
 
 - Dark Theme
-- Rutas Dinamicas
-- Noticias por secciones
-- Filtrado por categoria
-- Paginacion
+- Dynamic Routes
+- News by sections
+- Filter by category
+- Pagination
+
+**Screenshots:**
+
+![Home page dark](https://github.com/francorinque/RNews-Times/blob/main/src/images/RNews-times-home-dark.jpg?raw=true)
+![Home page light](https://github.com/francorinque/RNews-Times/blob/main/src/images/RNews-times-home.jpg?raw=true)
