@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const FooterStyled = styled.footer`
-  padding: 30px 10px;
+  padding: 100px 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,7 +31,8 @@ export const FooterContactStyled = styled(Flexbox)`
   ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    margin-top: 10px;
+    gap: 20px;
 
     li {
       transition: ease 0.1s;
@@ -45,6 +46,7 @@ export const FooterContactStyled = styled(Flexbox)`
       cursor: pointer;
       color: var(--clr-secundary-50);
       transition: ease 0.1s;
+      transform: scale(1.3);
     }
   }
 `

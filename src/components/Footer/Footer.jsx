@@ -6,7 +6,7 @@ import {
   WrapperFlex
 } from "./FooterStyles"
 
-import { Twitter, Instagram, Mail } from "iconoir-react"
+import { LinkedIn, GitHub, Mail } from "iconoir-react"
 import { Link } from "react-router-dom"
 
 const Footer = () => {
@@ -17,17 +17,17 @@ const Footer = () => {
           <h4>Contact</h4>
           <ul>
             <li>
-              <a href="/">
-                <Twitter />
+              <a href="https://www.linkedin.com/in/francorinque">
+                <LinkedIn />
               </a>
             </li>
             <li>
-              <a href="/">
-                <Instagram />
+              <a href="https://github.com/francorinque">
+                <GitHub />
               </a>
             </li>
             <li>
-              <a href="/">
+              <a href="mailto:francoagustinrinquecorreo@gmail.com">
                 <Mail />
               </a>
             </li>
@@ -40,8 +40,7 @@ const Footer = () => {
       </WrapperFlex>
 
       <CopyrightStyled>
-        Copyright (c) <strong>2023 The New York Times Company</strong>. All
-        Rights Reserved.
+        <strong>2023 Developed by Franco Rinque</strong>
       </CopyrightStyled>
     </FooterStyled>
   )
