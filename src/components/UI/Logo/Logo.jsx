@@ -1,15 +1,11 @@
-import { LogoStyled } from './LogoStyles'
+import { LogoStyled } from "./LogoStyles"
 
-import LogoImg from '../../../assets/images/logo.png'
+import { Link } from "react-router-dom"
 
-import { Link } from 'react-router-dom'
-
-const Logo = ({ width }) => {
+const Logo = ({ size }) => {
   return (
-    <LogoStyled width={width}>
-      <Link to='/'>
-        <img src={LogoImg} alt='logo' />
-      </Link>
+    <LogoStyled size={size}>
+      <Link to="/">Rnews</Link>
     </LogoStyled>
   )
 }

@@ -17,3 +17,8 @@ export const WrapperGridStyled = styled.div`
     grid-template-columns: 3fr 1fr;
   }
 `
+
+export const TitleStyled = styled.h1`
+  font-size: clamp(45px, 3vw, 80px);
+  font-weight: var(--bold);
+`

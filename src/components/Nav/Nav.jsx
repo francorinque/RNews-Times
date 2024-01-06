@@ -1,32 +1,18 @@
-import {
-  NavWrapperStyled,
-  NavStyled,
-  ToggleWrapperStyled,
-  ThemeWrapperStyled
-} from "./NavStyles"
+import { NavStyled, NavWrapperStyled, ToggleWrapperStyled } from "./NavStyles"
 //icons
-import {
-  SunLight,
-  MenuScale,
-  Cancel,
-  HalfMoon,
-  MouseButtonLeft
-} from "iconoir-react"
+import { Cancel, MenuScale } from "iconoir-react"
 //components
 import { Logo } from "../UI"
 import NavMenu from "./NavMenu"
 //others
-import { useSelector, useDispatch } from "react-redux"
-import { toggleTheme } from "../../store/theme/theme.slice"
-import { useState, useEffect, useContext } from "react"
+import { useContext, useEffect, useState } from "react"
+import { useDispatch } from "react-redux"
 import { MenuContext } from "../../context/menuContext"
 
 const Nav = () => {
   const [scrolled, setScrolled] = useState(false)
   const { isOpenMenu, setIsOpenMenu } = useContext(MenuContext)
   const dispatch = useDispatch()
-  const theme = useSelector(state => state.theme.theme)
-  let isDarkTheme = theme === "dark"
 
   function handleScroll() {
     let scroll = window.scrollY
@@ -42,13 +28,7 @@ const Nav = () => {
   return (
     <NavWrapperStyled $scrolled={scrolled} $isOpenMenu={isOpenMenu}>
       <NavStyled>
-        <Logo width="70" />
-
-        <ThemeWrapperStyled $isOpenMenu={isOpenMenu}>
-          <button onClick={() => dispatch(toggleTheme())}>
-            {isDarkTheme ? <SunLight /> : <HalfMoon />}
-          </button>
-        </ThemeWrapperStyled>
+        <Logo size="30" />
 
         <ToggleWrapperStyled $isOpenMenu={isOpenMenu}>
           <button onClick={() => setIsOpenMenu(!isOpenMenu)}>

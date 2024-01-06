@@ -19,10 +19,10 @@ export const NewsCategoriesStyled = styled.div`
 `
 
 export const CategoryStyled = styled(ButtonGlobalStyled)`
-  ${({ selected }) =>
-    selected &&
+  ${({ $selected }) =>
+    $selected &&
     css`
-      color: var(--clr-secundary-50);
-      outline-color: var(--clr-secundary-50);
+      color: var(--colorLinkActive);
+      outline-color: var(--colorLinkActive);
     `}
 `

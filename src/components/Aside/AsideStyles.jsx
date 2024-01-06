@@ -9,6 +9,7 @@ export const AsideStyled = styled.aside`
 `
 
 export const AsideTitleStyled = styled.h2`
+  font-size: clamp(35px, 2vw, 50px);
   margin-top: 1rem;
 `
 

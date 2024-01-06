@@ -7,13 +7,12 @@ export const ButtonGlobalStyled = styled(motion.button)`
   padding: 10px;
   border-radius: var(--radius);
   background: none;
-  outline: 2px solid var(--clr-primary-200);
+  outline: 2px solid var(--colorOutline);
   cursor: pointer;
   font-weight: var(--semibold);
-  color: ${({ theme }) => theme.text};
 
   &:hover {
-    color: var(--clr-secundary-50);
-    outline-color: var(--clr-secundary-50);
+    color: var(--colorLinkActive);
+    outline-color: var(--colorLinkActive);
   }
 `

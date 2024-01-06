@@ -1,7 +1,10 @@
 import styled from "styled-components"
 
 export const FooterStyled = styled.footer`
-  padding: 100px 10px;
+  padding: 30px 10px;
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,7 +13,7 @@ export const FooterStyled = styled.footer`
 
 export const WrapperFlex = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 50px;
 `

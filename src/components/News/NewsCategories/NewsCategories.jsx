@@ -23,7 +23,7 @@ const NewsCategories = () => {
           return (
             <CategoryStyled
               key={index + category}
-              selected={selected}
+              $selected={selected}
               onClick={() => handleCategory(category)}
             >
               {category}

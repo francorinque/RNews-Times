@@ -6,5 +6,5 @@ export const LayoutStyled = styled.div`
   margin: 0 auto;
   min-height: 100vh;
   position: relative;
-  padding: 0 20px;
+  padding: 0 10px;
 `

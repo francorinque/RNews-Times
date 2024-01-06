@@ -1,13 +1,13 @@
+import { useSelector } from "react-redux"
+import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
+import dayjs from "dayjs"
+
 import {
   RandomNewStyled,
   RandomNewImgStyled,
   RandomNewTextsStyled
 } from "./RandomNewStyles.jsx"
-
-import { useSelector } from "react-redux"
-import { useEffect, useState } from "react"
-import dayjs from "dayjs"
-import { Link } from "react-router-dom"
 
 const RandomNew = () => {
   const [randomNew, setRandomNew] = useState(null)

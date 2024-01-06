@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { NavLink } from "react-router-dom"
-import { css, styled } from "styled-components"
+import { styled } from "styled-components"
 
 export const NavWrapperStyled = styled.div`
   min-width: 250px;
@@ -11,8 +11,9 @@ export const NavWrapperStyled = styled.div`
   width: 100%;
   z-index: 99;
   transition: ease 1s;
-  background: ${({ theme, $isOpenMenu, $scrolled }) =>
-    $scrolled || $isOpenMenu ? theme.bgHeader : "none"};
+
+  background: ${({ $isOpenMenu, $scrolled }) =>
+    $isOpenMenu || $scrolled ? "var(--bgColorMenu)" : "transparent"};
 `
 
 export const NavStyled = styled.nav`
@@ -23,7 +24,7 @@ export const NavStyled = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 12px;
+  padding: 0 12px;
   position: relative;
 `
 
@@ -33,13 +34,14 @@ export const NavMenuMobileStyled = styled(motion.div)`
   flex-direction: column;
   justify-content: space-between;
   position: fixed;
-  top: calc(var(--h-header) + 10px);
-  right: 10px;
+  top: calc(var(--h-header) + 5px);
+  right: 0;
   z-index: 99;
   border-radius: var(--radius);
   padding: 20px;
-  min-width: 120px;
-  background: ${({ theme }) => theme.bgHeader};
+  min-width: 200px;
+  background-color: var(--bgColorMenu);
+  box-shadow: var(--shadow);
 
   @media (min-width: 768px) {
     display: none;
@@ -53,25 +55,19 @@ export const NavMenuDesktopStyled = styled.div`
 
   @media (min-width: 768px) {
     display: flex;
-    flex: 1;
     justify-content: flex-start;
+    align-items: center;
   }
 `
 
 export const LinkStyled = styled(NavLink)`
-  color: ${({ theme }) => theme.textHeader};
-
+  font-weight: var(--semibold);
   &.active {
-    color: var(--clr-secundary-50);
+    color: var(--colorLinkActive);
   }
 
   &:hover {
-    color: var(--clr-secundary-50);
-    outline-color: var(--clr-secundary-50);
-  }
-
-  @media (min-width: 768px) {
-    color: ${({ theme }) => theme.text};
+    color: var(--colorLinkActive);
   }
 `
 
@@ -80,27 +76,11 @@ const resetButton = styled.div`
     border: none;
     background: none;
     cursor: pointer;
-
-    svg {
-      color: ${({ theme }) => theme.textHeader};
-    }
   }
 `
 
 export const ToggleWrapperStyled = styled(resetButton)`
   @media (min-width: 768px) {
     display: none;
-  }
-`
-
-export const ThemeWrapperStyled = styled(resetButton)`
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-
-  @media (min-width: 768px) {
-    right: 0;
-    left: unset;
   }
 `

@@ -1,38 +1,50 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 
-export const NewsItemWrapperStyled = styled(Link)`
-  color: ${({ theme }) => theme.text};
+export const WrapperStyled = styled(Link)`
   flex: 1 0 300px;
-  min-height: 400px;
   cursor: pointer;
+  outline: 2px solid var(--colorOutline);
+  border-radius: var(--radius);
+  overflow: hidden;
+  padding: 15px;
 `
 
-export const NewsItemStyled = styled.div`
+export const ItemStyled = styled.div`
   img {
     height: 350px;
+    margin-bottom: 20px;
+    border-radius: var(--radius);
   }
 `
 
-export const NewsItemContentStyled = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-`
+export const ContentStyled = styled.div``
 
-export const NewsItemTitleStyled = styled.div`
+export const TitleStyled = styled.div`
   text-align: start;
   h4 {
-    font-size: clamp(16px, 2vw, 18px);
+    font-size: clamp(18px, 2vw, 20px);
   }
 `
 
-export const NewsItemInfoStyled = styled.div`
+export const InfoStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`
+
+export const FooterStyled = styled.div`
   display: flex;
   justify-content: space-between;
+  width: 100%;
   align-items: center;
 `
 
-export const NewsItemDateStyled = styled.span`
+export const DateStyled = styled.span`
   font-size: 14px;
+  font-weight: var(--regular);
+`
+export const SectionStyled = styled.p`
+  border-radius: var(--radius);
+  font-weight: var(--semibold);
 `

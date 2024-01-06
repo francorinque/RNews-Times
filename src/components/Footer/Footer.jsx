@@ -40,7 +40,7 @@ const Footer = () => {
       </WrapperFlex>
 
       <CopyrightStyled>
-        <strong>2023 Developed by Franco Rinque</strong>
+        <strong> {new Date().getFullYear()} Developed by Franco Rinque</strong>
       </CopyrightStyled>
     </FooterStyled>
   )

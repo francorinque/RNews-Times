@@ -1,5 +1,11 @@
-import { styled } from 'styled-components'
+import { styled } from "styled-components"
 
 export const LogoStyled = styled.div`
-  width: ${({ width }) => `${width}px`};
+  font-size: ${({ size }) => `${size}px`};
+
+  font-weight: var(--bold);
+
+  a {
+    color: inherit;
+  }
 `
