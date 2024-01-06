@@ -2,7 +2,7 @@ import { SearchBySectionStyled } from "./SearchBySectionStyles"
 
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import { getTopNews } from "../../apis/news"
+import { getTopNews } from "../../services/api"
 import { NewsItem } from "../../components"
 import { Loader } from "../../components/UI"
 import { usePagination } from "../../hooks"

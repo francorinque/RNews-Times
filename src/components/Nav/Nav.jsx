@@ -6,13 +6,11 @@ import { Logo } from "../UI"
 import NavMenu from "./NavMenu"
 //others
 import { useContext, useEffect, useState } from "react"
-import { useDispatch } from "react-redux"
 import { MenuContext } from "../../context/menuContext"
 
 const Nav = () => {
   const [scrolled, setScrolled] = useState(false)
   const { isOpenMenu, setIsOpenMenu } = useContext(MenuContext)
-  const dispatch = useDispatch()
 
   function handleScroll() {
     let scroll = window.scrollY

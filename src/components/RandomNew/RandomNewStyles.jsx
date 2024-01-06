@@ -2,8 +2,8 @@ import styled from "styled-components"
 
 export const RandomNewStyled = styled.div`
   width: 100%;
-  position: relative;
   height: auto;
+  position: relative;
   margin-top: 20px;
 
   &::after {
@@ -14,19 +14,22 @@ export const RandomNewStyled = styled.div`
       to bottom,
       rgb(0 0 0 /0.1),
       rgb(0 0 0 /0.5),
-      rgb(0 0 0 /0.5),
+      rgb(0 0 0 /0.6),
       rgb(0 0 0 / 0.9)
     );
-    backdrop-filter: blur(1.5px);
+    backdrop-filter: blur(1.3px);
     z-index: 1;
   }
 
-  a {
-    color: var(--clr-primary-100);
-  }
   @media (min-width: 768px) {
     height: 70vh;
   }
+`
+
+export const WrapperLoader = styled.div`
+  min-height: 50vh;
+  display: grid;
+  place-content: center;
 `
 
 export const RandomNewImgStyled = styled.img`
@@ -42,12 +45,16 @@ export const RandomNewTextsStyled = styled.div`
   text-align: center;
   padding: 20px;
   z-index: 2;
+  color: var(--textColorRandomNews);
 
   h4 {
     max-width: 500px;
-    color: var(--textColorRandomNews);
     margin-inline: auto;
     font-size: clamp(30px, 2vw, 60px);
     text-wrap: balance;
+  }
+
+  span {
+    opacity: 60%;
   }
 `

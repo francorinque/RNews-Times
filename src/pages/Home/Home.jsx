@@ -1,5 +1,6 @@
-import { HomeStyled, WrapperGridStyled, TitleStyled } from "./HomeStyles"
+import { HomeStyled, TitleStyled } from "./HomeStyles"
 //components
+import { WrapperGridStyled } from "../../components/styles/GlobalComponents"
 import { News, NewsCategories, Aside, RandomNew } from "../../components"
 import Rectangle from "../../components/Rectangle/Rectangle"
 

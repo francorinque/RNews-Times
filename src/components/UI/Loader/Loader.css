@@ -1,7 +1,7 @@
 .loader {
   display: block;
   margin: 0 auto;
-  color: #fff;
+  color: var(--colorLoader);
   font-size: 10px;
   width: 1em;
   height: 1em;

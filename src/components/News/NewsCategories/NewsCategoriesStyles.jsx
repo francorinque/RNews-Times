@@ -7,8 +7,8 @@ export const NewsCategoriesStyled = styled.div`
   gap: 20px;
   padding: 20px 0;
 
-  ${({ loading }) =>
-    loading &&
+  ${({ $loading }) =>
+    $loading &&
     css`
       display: grid;
       place-items: center;

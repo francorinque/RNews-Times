@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react"
-import { useSelector } from "react-redux"
 
-import { getTopNews } from "../apis/news"
+import { getTopNews } from "../services/api"
 import { useLocation } from "react-router-dom"
+import { useNews } from "../store/news"
 
 export const useSingleNews = ({ title }) => {
   const location = useLocation()
 
   //traemos el estado global
-  const topNews = useSelector(state => state.topNews.topNews)
+  const { topNews } = useNews(state => state)
   //guardamos el singleNews si hay estado global
   const singleNewsFromCache = topNews.find(
     singleNews => singleNews.title === title

@@ -1,29 +1,25 @@
 import {
   NewsCardsStyled,
-  NewsWrapperStyled,
   NewsPaginationStyled,
-  PaginationButtonStyled,
-  WrapperLoader
+  NewsWrapperStyled,
+  PaginationButtonStyled
 } from "./NewsStyles"
 //components
-import { Loader, MySkeleton } from "../UI"
+import { MySkeleton } from "../UI"
 //others
 import { useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { getTopNews } from "../../store/topnews/thunks"
-import { useFilters, usePagination } from "../../hooks"
 import { NewsItem } from ".."
+import { useFilters, usePagination } from "../../hooks"
+import { useNews } from "../../store/news"
 
 let INITIAL_STATE = 6
 
 const News = () => {
-  const dispatch = useDispatch()
-
   //filtro
   const { filter, filterTopNews } = useFilters()
 
   //estado global
-  let { topNews, loading, total } = useSelector(state => state.topNews)
+  const { topNews, total, fetchTopNews } = useNews(state => state)
 
   //pagination
   const { perPage, setPerPage, handlePrev, handleNext } = usePagination(
@@ -33,7 +29,7 @@ const News = () => {
 
   //traemos los datos
   useEffect(() => {
-    dispatch(getTopNews())
+    fetchTopNews()
   }, [])
 
   useEffect(() => {
@@ -47,7 +43,7 @@ const News = () => {
     <>
       <NewsWrapperStyled>
         <NewsCardsStyled>
-          {loading ? (
+          {filteredTopNews.length < 1 ? (
             <>
               <MySkeleton />
               <MySkeleton />

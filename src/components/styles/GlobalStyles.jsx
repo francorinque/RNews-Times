@@ -20,6 +20,7 @@ export const GlobalStyles = createGlobalStyle`
         --bgColor: #f6efde;
         --bgColorMenu: #ede0bb;
         --colorLinkActive: #674427;
+        --colorLoader: #674427;
         --colorOutline: rgba(81, 81, 81, 0.254);
         --textColorRandomNews : #f6efde;
         --textColor: #181818;

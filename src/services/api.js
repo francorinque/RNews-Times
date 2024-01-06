@@ -1,4 +1,5 @@
 import axios from "axios"
+
 let KEY = import.meta.env.VITE_API_KEY
 
 export const API = axios.create({

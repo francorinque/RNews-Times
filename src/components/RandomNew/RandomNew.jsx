@@ -1,22 +1,25 @@
-import { useSelector } from "react-redux"
-import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import { Loader } from "../index.js"
+import useRandomNew from "../../hooks/useRandomNew.js"
 import dayjs from "dayjs"
 
 import {
-  RandomNewStyled,
   RandomNewImgStyled,
-  RandomNewTextsStyled
+  RandomNewStyled,
+  RandomNewTextsStyled,
+  WrapperLoader
 } from "./RandomNewStyles.jsx"
 
 const RandomNew = () => {
-  const [randomNew, setRandomNew] = useState(null)
-  const { topNews } = useSelector(state => state.topNews)
+  const { randomNew } = useRandomNew()
 
-  useEffect(function () {
-    let randomNumber = Math.floor(Math.random() * topNews?.length)
-    setRandomNew(topNews[randomNumber])
-  }, [])
+  if (!randomNew) {
+    return (
+      <WrapperLoader>
+        <Loader />
+      </WrapperLoader>
+    )
+  }
 
   return (
     randomNew && (

@@ -17,7 +17,7 @@ const Footer = () => {
           <h4>Contact</h4>
           <ul>
             <li>
-              <a href="https://www.linkedin.com/in/francorinque">
+              <a href="https://www.linkedin.com/in/franco-agustin-rinque">
                 <LinkedIn />
               </a>
             </li>

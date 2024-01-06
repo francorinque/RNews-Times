@@ -2,11 +2,11 @@ import { NewsCategoriesStyled, CategoryStyled } from "./NewsCategoriesStyles"
 //components
 import { Loader } from "../../UI"
 
-import { useSelector } from "react-redux"
 import { useFilters } from "../../../hooks"
+import { useNews } from "../../../store/news"
 
 const NewsCategories = () => {
-  const { categories, loading } = useSelector(state => state.topNews)
+  const { categories } = useNews(state => state)
   const { filter, setFilter } = useFilters()
 
   function handleCategory(category) {
@@ -14,8 +14,8 @@ const NewsCategories = () => {
   }
 
   return (
-    <NewsCategoriesStyled loading={loading}>
-      {loading ? (
+    <NewsCategoriesStyled $loading={categories.length === 0}>
+      {categories.length < 1 ? (
         <Loader />
       ) : (
         categories.map((category, index) => {

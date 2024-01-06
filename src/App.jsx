@@ -2,9 +2,8 @@ import { GlobalStyles } from "./components/styles/GlobalStyles"
 
 import Router from "./Router/Router"
 //components
-import { Footer, Nav } from "./components"
-import { useSelector } from "react-redux"
 import { HashRouter } from "react-router-dom"
+import { Footer, Nav } from "./components"
 import { Circle } from "./components/UI"
 
 function App() {
